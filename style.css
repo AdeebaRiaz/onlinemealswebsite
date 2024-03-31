@@ -1,0 +1,293 @@
+.bree-serif-regular {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* to enable smooth scroll where user jumps to particular section on clicking it  */
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+:root {
+    --navbar-height: 59px;
+
+}
+
+
+/* Navigation Bar */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+/* Navigation Bar :Logo and Image  */
+#logo {
+    margin: 25px 24px;
+
+}
+
+#logo img {
+    width: 68px;
+    height: 68px;
+    padding: 8px 18px;
+}
+
+
+/* Navigation Bar :List and styling  */
+
+/* set navbar position as relative to set its position relative to its nearest */
+/* ancestor body tag and to make pseudo element fall within navbar dimensions */
+
+
+#navbar ul {
+    display: flex;
+    font-family: "Bree Serif", serif;
+
+}
+
+/* before pseudo selector to create pseudo background effect*/
+#navbar::before {
+    content: " ";
+    background-color: black;
+    /* position:absolute to contain it inside its parent */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    /*the img goes to top of page using top:0 and left:0 */
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+
+#navbar ul li {
+
+    list-style-type: none;
+    font-size: 1.3rem;
+
+}
+
+/* to add hover effect to padding we add sep padding to a tag, if we give
+padding to li then the hover will aplly to whole list and not individual links of a tag */
+#navbar ul li a {
+    /* give display block as we want to apply padding attribute to a */
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+
+}
+
+/* adding hover effect for a tag  */
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+
+}
+
+
+/* Home Section  */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    /* increasing section height to adjust content placement */
+    height: 448px;
+    padding:3px 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* bg image for home using pseudo class */
+#home::before {
+    content: " ";
+    background: url('./bg.jpg')no-repeat center center/cover;
+    /* position:absolute to contain it inside its parent */
+    position: absolute;
+    height: 604px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.89;
+
+}
+
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.bree-serif-regular {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Services section */
+
+#services {
+    margin: 38px;
+    display: flex;
+}
+
+
+
+#services .box {
+    border: 2px solid brown;
+    padding: 14px;
+    margin: 2px 0px;
+    border-radius: 28px;
+    background-color: rgb(223, 222, 221);
+    margin-bottom: 20px;
+}
+
+#services .box img {
+    width: 137px;
+    height: 98px;
+    margin: auto;
+    display: block;
+}
+
+#services .box p {
+    font-family: "Bree Serif", serif;
+}
+
+/* Clients Section  */
+
+#client-section {
+    position: relative;
+    /* height: 344px; */
+}
+
+
+#client-section::before {
+    content: " ";
+    position: absolute;
+    background: url(bg.jpg);
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.client-item {
+    padding: 1px;
+}
+
+#clients img {
+    width: 107px;
+    padding: 2px 5px;
+    height:auto;
+}
+/* Contact Section  */
+
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(bg3.jpg) no-repeat center center/cover;
+}
+
+
+footer {
+    background: black;
+    color: white;
+    padding: 12px 5px;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+#contact-box form {
+    width: 40%;
+
+}
+
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: "Bree Serif", serif;
+
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-siZe:1.1rem;
+}
+
+/* Utility class */
+.h-primary {
+    font-siZe: 3.8rem;
+    padding: 12px;
+    font-family: "Bree Serif", serif;
+
+
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.h-secondary {
+    font-siZe: 2.2rem;
+    padding: 12px;
+    font-family: "Bree Serif", serif;
+
+
+}
